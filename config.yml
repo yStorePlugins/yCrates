@@ -43,6 +43,9 @@ Preview: true
 # Caso false, usará as do ProtocolLIB
 packet-events-particles: false
 
+# Dar as keys compactadas em 1 item só
+give-compact: true
+
 # Limite máximo de abertura de keys por click
 all-limit: 100
 
