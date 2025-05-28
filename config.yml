@@ -81,6 +81,9 @@ Mensagens:
    Descompactar-Encontrado: '&cA crate vinculada nesta key não foi encontrada.'
    Descompactar-Minimo: '&cA sua key já está no mínimo possível.'
    Descompactar: '&a{amount} Keys descompactadas.'
+   Compactar-Segurando: '&cVocê precisa estar segurando keys compactadas.'
+   Compactar-Encontrado: '&cA crate vinculada nesta key não foi encontrada.'
+   Compactar: '&a{amount} Keys compactadas.'
    Recebeu todos:
       - ''
       - '&aTodos os jogadores receberam &7{quantia}x &akey(s) da crate &7{crate}&a.'
