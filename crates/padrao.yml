@@ -1,11 +1,13 @@
 # Criar uma cabeça animada (que fica rodando) no lugar de um bloco
 HeadAnimada: false
+
 HAOptions:
   Velocidade: 4
   Altura: -1.2
   Particula:
     Ativar: true
     Particula: 'FLAME'
+
 Holograma:
   # Esta opção serve para ajustar a altura do holograma
   # caso a crate seja uma cabeça animada, recomendamos 4.3
@@ -22,15 +24,13 @@ Holograma:
     - ''
     - ''
     - '[item]DIAMOND_BLOCK' #use [item] para colocar um item
+
 # Este é o item que servirá para abrir a crate
 Key:
-  CustomSkull: false #se colocar true, coloque o URL
-  URL: ''
-  ID: TRIPWIRE_HOOK
-  Data: 0
-  Glow: true
-  Name: '&fChave da caixa &bdiamante&f.'
-  Lore:
+  material: 'TRIPWIRE_HOOK'
+  glow: true
+  name: '&fChave da caixa &bdiamante&f.'
+  lore:
     - '&7Esta chave abre a caixa &bdiamante&7,'
     - '&7com ela, você consegue itens raros.'
     - ''
@@ -38,32 +38,36 @@ Key:
     - ''
     - '&f Quantia: &b{amount}'
     - ''
+
 # Este é o item que será dado para gerar a crate
 Item:
-  CustomSkull: false #se colocar true, coloque o URL
-  URL: ''
-  ID: CHEST
-  Data: 0
-  Glow: true
-  Name: '&fCaixa &bdiamante&f.'
-  Lore:
-    - '&7Coloque-a no chão para gerar a crate.'
+  material: CHEST
+  glow: true
+  name: '&fCaixa &bdiamante&f.'
+  lore: ['&7Coloque-a no chão para gerar a crate.']
+
 # Os locais das caixas. Não altere nada aqui.
 Locais: [ ]
+
 # Permissão para poder abrir a crate. Deixe vazio para não usar.
 Permissao: ''
+
 # Nome da crate
 Display name: 'Diamante'
+
 # Ativar a animação do item subir para cima do bloco (delay de 4 segundos)
 # Funciona apenas na 1.8
 Animacao: false
+
 # Fireworks = Fogos de artifício
 # Explode = Explosão ao redor
 # Estas opções podem gerar um timings a mais.
 Fireworks: false
 Explode: false
+
 # Ao clicar com shift, irá abrir a crate de acordo com a quantia de keys na mão
 Shift tudo: true
+
 # Recompensas da crate
 Recompensas:
   #
@@ -84,22 +88,15 @@ Recompensas:
       Chat:
         Ativar: true
         Broadcast: false
-        Msg:
-          - '&aVocê &7({player}) &aabriu uma caixa.'
+        Msg: ['&aVocê &7({player}) &aabriu uma caixa.']
       Title: '&eVocê abriu<nl>&auma caixa!'
     # Item que irá aparecer na pré-visualização
     Display:
-      CustomSkull: false #se colocar true, coloque o URL
-      URL: ''
-      ID: DIAMOND
-      Data: 0
-      Glow: true
-      Name: '&bDIAMANTES!'
-      Amount: 64
-      Lore:
-        - '&7Chance: &f50%&7.'
-      Enchants:
-        - '' #deixe vazio para não usar
+      material: DIAMOND
+      glow: true
+      name: '&bDIAMANTES!'
+      amount: 64
+      lore: ['&7Chance: &f50%&7.']
     #
     Recompensa:
       # Ativar o give de itens
@@ -107,22 +104,15 @@ Recompensas:
       # Ativar o give de comandos
       Usar comandos: true
       # Comandos a serem dados
-      Comandos:
-        - 'alerta {player} é bonito'
+      Comandos: ['alerta {player} é bonito']
       # Itens a serem dados
       Itens:
         #
         Diamante:
-          CustomSkull: false
-          URL: ''
-          ID: DIAMOND
-          Data: 0
-          Amount: 64
-          Name: '&bDIAMANTES!'
-          Glow: true
-          Lore: [ ]
-          Enchants:
-            - '' #deixe vazio para não usar
+          material: DIAMOND
+          glow: true
+          name: '&bDIAMANTES!'
+          amount: 64
 
 
 
