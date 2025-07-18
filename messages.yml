@@ -53,3 +53,8 @@ chat:
   filter-removed: '&aEste item foi removido do filtro.'
   world-blacklisted: '&cVocê não pode coletar recompensas neste mundo.'
   wait-collect: '&cAguarde parar recolher recompensas novamente.'
+  batch-opening: '&aAbrindo &f{amount}&a caixas em lote...'
+  batch-changed: '&cAbertura cancelada - key original removida/trocada.'
+  batch-interrupted: '&6Abertura interrompida! &aForam abertas &f{amount}&a caixas.'
+  batch-progress: '&7Progresso: &a{percentage}% &7({consumed}/{total}).'
+  batch-finalized: '&aFinalizou a abertura de &f{amount}&a crates.'

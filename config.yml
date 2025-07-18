@@ -59,6 +59,21 @@ give-compact: true
 # Limite máximo de abertura de keys por click
 all-limit: 100
 
+# Sistema de abertura em lote (batch)
+batch:
+   # Quantidade inicial de caixas a serem abertas por tick
+   size: 500
+   # Delay entre cada lote em ticks (20 ticks = 1 segundo)
+   delay: 1
+   # Sistema adaptativo de batch (ajusta automaticamente baseado no TPS)
+   adaptive: true
+   # Quantidade máxima de caixas por tick (limite superior)
+   max-size: 2000
+   # Quantidade mínima de caixas por tick (limite inferior)
+   min-size: 50
+   # TPS mínimo para considerar o servidor com boa performance
+   tps-threshold: 18.0
+
 # Sistema de lores
 lore:
    filter-remove: ['&cClique para remover do filtro']
