@@ -97,12 +97,17 @@ Recompensas:
       name: '&bDIAMANTES!'
       amount: 64
       lore: ['&7Chance: &f50%&7.']
+      lore-collect: [ '&aEsta pedra vale muito dinheiro!', '', ' &7> &fQuantidade: &7{amount}', '', '&eClique esquerdo para receber', '&eClique direito para deletar' ]
     #
     Recompensa:
       # Ativar o give de itens
       Usar itens: true
       # Ativar o give de comandos
       Usar comandos: true
+      # quantia padrão da placeholder {amount} no comando (valor base)
+      placeholder-amount: 1
+      # multiplicar a placeholder {amount} pela quantia de recompensas do mesmo tipo
+      multiply-placeholder: true
       # Comandos a serem dados
       Comandos: ['alerta {player} é bonito']
       # Itens a serem dados

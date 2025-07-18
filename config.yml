@@ -26,9 +26,16 @@ database:
       # Senha do usuário de conexão: [EX: 123]
       password: ''
 
-Comando:
-   Comando: 'crate'
-   Aliases: [crates, caixa, caixas]
+# Este limite serve para recolher recompensas
+# Desativar ou aumentar o limite pode gerar lag
+# e em alguns casos crashar o servidor.
+limit:
+   enabled: true
+   # Máximo que irá recolher por vez
+   max: 1000
+
+# Mundos que não poderão coletar recompensas
+world-reward-collect-blacklist: [ 'none' ]
 
 # Carregar as crates depois de x tempo que o server ligar
 Carregar depois: 20 # Em ticks (20 ticks = 1 segundo)
@@ -38,6 +45,9 @@ Filtro: true
 
 # Ativar o menu de preview
 Preview: true
+
+# Ativar o menu ao digitar /crate
+crate-menu: false
 
 # Usar as partículas do Packet-Events
 # Caso false, usará as do ProtocolLIB
@@ -59,44 +69,7 @@ crate-cleaner:
    # em segundos
    time: 300
 
-Mensagens:
-   Segurando: '&cVocê deve estar segurando uma key para abrir a crate &7{crate}&c.'
-   Key nao: '&cEsta key não abre a crate &7{crate}&c.'
-   Ja abrindo: '&cAlguém já está abrindo a crate &7{crate}&c neste local.'
-   Mal configurada: '&cEsta crate não existe ou está mal configurada.'
-   Setada: '&aCrate &7{crate} &asetada.'
-   Removida: '&aCrate &7{crate} &aremovida.'
-   Inv cheio: '&cSeu inventário está cheio.'
-   Permissao: '&cVocê não tem permissão para isso.'
-   Nao encontrado: '&cJogador não encontrado.'
-   Nao e numero: '&cO argumento não é um número.'
-   Deu crate: '&aVocê deu &7{quantia}x {crate} &apara o jogador &7{player}&a.'
-   Recebeu crate: '&aVocê recebeu &7{quantia}x {crate}&a.'
-   Deu key: '&aVocê deu &7{quantia}x &akey(s) da crate &7{crate} &apara o jogador &7{player}&a.'
-   Recebeu key: '&aVocê recebeu &7{quantia}x &a key(s) da crate &7{crate}&a.'
-   Deu todos: '&aVocê deu &7{quantia}x &akey(s) da crate &7{crate}&a para &7({players}) &ajogadores online.'
-   AdicionadoFiltro: '&aEste item foi adicionado ao filtro.'
-   RemovidoFiltro: '&aEste item foi removido do filtro.'
-   Descompactar-Segurando: '&cVocê precisa estar segurando keys compactadas.'
-   Descompactar-Encontrado: '&cA crate vinculada nesta key não foi encontrada.'
-   Descompactar-Minimo: '&cA sua key já está no mínimo possível.'
-   Descompactar: '&a{amount} Keys descompactadas.'
-   Compactar-Segurando: '&cVocê precisa estar segurando keys compactadas.'
-   Compactar-Encontrado: '&cA crate vinculada nesta key não foi encontrada.'
-   Compactar: '&a{amount} Keys compactadas.'
-   Recebeu todos:
-      - ''
-      - '&aTodos os jogadores receberam &7{quantia}x &akey(s) da crate &7{crate}&a.'
-      - ''
-   Help:
-      - '&c&lERRO! &cComandos disponíveis:'
-      - '&c-> /crate givecrate'
-      - '&c-> /crate givekey'
-      - '&c-> /crate keyall'
-      - '&c-> /crate reload'
-      - ''
-#
-#
+# Sistema de sons
 Sons:
    Erro:
       Ativar: true
@@ -104,15 +77,11 @@ Sons:
    Ganhou:
       Ativar: true
       Som: 'ORB_PICKUP'
-#
-#
-##
+
 # Lista de efeitos da 1.8: https://helpch.at/docs/1.8.8/org/bukkit/Effect.html
 # Lista de efeitos da 1.16: https://helpch.at/docs/1.16.1/org/bukkit/Effect.html
-#
 # Lista de sons da 1.8: https://helpch.at/docs/1.8.8/org/bukkit/Sound.html
 # Lista de sons da 1.16: https://helpch.at/docs/1.16.1/org/bukkit/Sound.html
-#
 Explode:
    Som: 'EXPLODE'
    Efeitos:
@@ -120,33 +89,3 @@ Explode:
    - 'VILLAGER_THUNDERCLOUD:300' # Efeito:intensidade
    - 'CLOUD:230' # Efeito:intensidade
    - 'EXPLOSION_HUGE:20' # Efeito:intensidade
-#
-#
-Setas:
-   Voltar:
-      CustomSkull: false
-      URL: ''
-      ID: ARROW
-      Data: 0
-      Glow: true
-      Name: '&cVoltar'
-      Lore:
-      - '&7Clique para voltar ao menu anterior.'
-   Anterior:
-      CustomSkull: false
-      URL: ''
-      ID: ARROW
-      Data: 0
-      Glow: true
-      Name: '&cVoltar'
-      Lore:
-      - '&7Clique para voltar à página anterior.'
-   Proximo:
-      CustomSkull: false
-      URL: ''
-      ID: ARROW
-      Data: 0
-      Glow: true
-      Name: '&aPróxima'
-      Lore:
-      - '&7Clique para ir à próxima página.'
