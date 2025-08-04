@@ -68,6 +68,9 @@ Explode: false
 # Ao clicar com shift, irá abrir a crate de acordo com a quantia de keys na mão
 Shift tudo: true
 
+# Verificar se o inventário está cheio
+Verificar inv: true
+
 # Recompensas da crate
 Recompensas:
   #
